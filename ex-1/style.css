@@ -1,0 +1,86 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.wrapper {
+  margin: 100px auto;
+}
+
+.intro {
+  text-align: center;
+}
+
+.intro svg path {
+  fill: black;
+}
+
+.intro h1 {
+  margin-top: 20px;
+}
+
+.intro p {
+  margin-top: 10px;
+}
+
+.intro ul {
+  margin-top: 10px;
+  list-style: none;
+  font-size: 0;
+}
+
+.intro li {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.intro li + li::before {
+  content: '\00b7';
+  margin: 0 .35em;
+}
+
+.login {
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 1px solid #ddd;
+  text-align: center;
+}
+
+.login form {
+  margin: 30px auto 0;
+  max-width: 300px;
+}
+
+.login input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 0 auto;
+  font-family: inherit;
+}
+
+.forgot-password {
+  display: block;
+  margin: 10px 0;
+}
+
+.submit {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.login .new-account {
+  margin-top: 15px;
+}
