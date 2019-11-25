@@ -1,3 +1,11 @@
+:root {
+  --primary: #7159C1;
+  --primaryDark: #332C63;
+  --primaryLight: #A594EA;
+  --accent: #3EF277;
+  --accentDark: #34CA63;
+}
+
 *,
 *::before,
 *::after {
@@ -6,28 +14,64 @@
   box-sizing: border-box;
 }
 
+
+
 body {
-  font-family: sans-serif;
+  font-family: 'Lato', sans-serif;
+}
+
+h1, h2 {
+  font-family: 'Roboto Slab', serif;
+  line-height: 1.25;
+}
+
+p {
+  line-height: 1.5;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary);
 }
 
 .wrapper {
-  margin: 100px auto;
+  margin: 60px auto;
+  width: 980px;
+  height: 550px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+  display: flex;
 }
 
 .intro {
-  text-align: center;
+  width: 60%;
+  background: var(--primaryDark);
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
 }
 
 .intro svg path {
-  fill: black;
+  fill: #fff;
 }
 
 .intro h1 {
-  margin-top: 20px;
+  margin-top: auto;
+  color: var(--primaryLight);
+  font-size: 45px;
+  font-weight: normal;
 }
 
 .intro p {
   margin-top: 10px;
+  font-size: 16px;
+  color: #fff;
 }
 
 .intro ul {
@@ -40,6 +84,10 @@ body {
   display: inline-block;
   font-size: 16px;
   font-weight: bold;
+  color: var(--accent);
+  margin-top: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .intro li + li::before {
@@ -48,28 +96,47 @@ body {
 }
 
 .login {
-  margin-top: 50px;
-  padding-top: 30px;
-  border-top: 1px solid #ddd;
-  text-align: center;
+  width: 40%;
+  background: #fff;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
 }
 
-.login form {
-  margin: 30px auto 0;
-  max-width: 300px;
+.login h2 {
+  color: var(--primary);
+  font-size: 30px;
+}
+
+.login p {
+  color: #666;
+  margin-top: 10px;
+  margin-bottom: 40px;
 }
 
 .login input {
   display: block;
   width: 100%;
-  padding: 10px;
+  padding: 12px 18px;
   margin: 0 auto;
   font-family: inherit;
+  font-size: 15px;
+  border: 1px solid #ddd;
+  outline: 0;
+}
+
+.login input + input {
+  margin-top: 5px;
+}
+
+.login input:focus {
+  border-color: var(--primary);
 }
 
 .forgot-password {
   display: block;
-  margin: 10px 0;
+  margin: 15px 0 20px;
+  color: #888;
 }
 
 .submit {
@@ -78,9 +145,35 @@ body {
   margin-bottom: 10px;
   padding: 10px;
   font-family: inherit;
-  font-size: 16px;
+  font-size: 17px;
+  background: var(--primary);
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .login .new-account {
-  margin-top: 15px;
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.login .new-account a {
+  color: var(--accentDark);
+  text-decoration: none;
+  position: relative;
+}
+
+.login .new-account a:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background: var(--accentDark);
+  transition: all .2s;
+}
+
+.login .new-account a:hover:after {
+  bottom: -6px;
 }
